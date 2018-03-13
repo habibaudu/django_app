@@ -25,7 +25,7 @@ class Link(models.Model):
   
 
 class Bookmark(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=100)
     user = models.ForeignKey(User,models.CASCADE)
     link = models.ForeignKey(Link,models.CASCADE)
 
@@ -37,7 +37,7 @@ class Bookmark(models.Model):
 
    
 class Tags(models.Model):
-    name = models.CharField(max_length = 64 , unique = True)
+    name = models.CharField(max_length = 65 , unique = True)
     bookmarks = models.ManyToManyField(Bookmark)
 
     def __str__(self):
@@ -68,9 +68,9 @@ class Friendship(models.Model):
         unique_together = (('from_friend', 'to_friend'),)
 
 class Invitation(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=60)
     email = models.EmailField()
-    code = models.CharField(max_length=20)
+    code = models.CharField(max_length=25)
     sender = models.ForeignKey(User,on_delete=models.CASCADE)
     def __str__(self):
         return '%s, %s' % (self.sender.username, self.email)
