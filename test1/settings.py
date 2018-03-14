@@ -60,7 +60,7 @@ MIDDLEWARE = [
     
 ]
 
-ROOT_URLCONF = 'test1.urls'
+ROOT_URLCONF = 'django_app.urls'
 
 TEMPLATES = [
     {
@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'test1.wsgi.application'
+WSGI_APPLICATION = 'django_app.wsgi.application'
 
 
 # Database
@@ -155,4 +155,4 @@ print(LOCALE_PATHS)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE =  'whitenoise.django.GzipManifestStaticFilesStorage'
