@@ -31,7 +31,7 @@ CACHE_BACKEND = 'db://cache_table'
 CACHE_BACKEND = 'file:///tmp/django_cache'
 CACHE_MIDDLEWARE_SECONDS = 60 * 5
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djhabib.herokuapp.com']
 
 
 # Application definition
