@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
     
 ]
+AUTH_USER_MODEL = 'app.User'
 
 ROOT_URLCONF = 'test1.urls'
 
